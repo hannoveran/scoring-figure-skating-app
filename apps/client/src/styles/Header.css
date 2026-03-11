@@ -1,0 +1,31 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2vh 3vw;
+  border-bottom: 5px solid var(--secondary);
+}
+
+header p {
+  color: var(--primary);
+}
+
+.logo-app-name a {
+  display: flex;
+  align-items: center;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.header-buttons button {
+  padding: 1vh 1vw;
+}
+
+.role {
+  background-color: var(--accent-blue-light);
+  padding: 1vh 1vw;
+  border-radius: var(--radius);
+}

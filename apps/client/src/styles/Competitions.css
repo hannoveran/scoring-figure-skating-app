@@ -1,0 +1,35 @@
+.competition-page main {
+  padding: auto;
+}
+
+.competitions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2vw;
+  margin-top: 4vh;
+}
+
+.competition button {
+  padding: 3vh 3vw;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  border-radius: 15px;
+  border: 2px solid var(--border);
+}
+
+.name-status {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 4vw;
+}
+
+.location-dates {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

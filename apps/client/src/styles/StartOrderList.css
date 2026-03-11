@@ -1,0 +1,12 @@
+.start-order-list-table {
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+  border-collapse: collapse;
+}
+
+.start-order-list-table td,
+.start-order-list-table th {
+  padding: 2vh 4vw;
+  text-align: left;
+}

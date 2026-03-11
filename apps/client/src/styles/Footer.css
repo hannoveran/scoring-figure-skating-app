@@ -1,0 +1,10 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 5vh 2vw;
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 2vw;
+}

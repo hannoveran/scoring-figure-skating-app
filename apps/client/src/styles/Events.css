@@ -1,0 +1,29 @@
+.events-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vw;
+  padding-top: 5vh;
+}
+
+.gender,
+.program {
+  display: flex;
+  gap: 3vw;
+}
+
+.events-page main button {
+  width: 15vw;
+  height: 10vh;
+}
+
+@media (max-width: 768px) {
+  .gender,
+  .program {
+    flex-direction: column;
+  }
+
+  .events-page main button {
+    width: 200px;
+  }
+}

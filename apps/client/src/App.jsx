@@ -1,19 +1,28 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './layout/Layout';
+import Dashboard from './pages/Dashboard';
 import Competitions from './pages/Competitions';
-import Events from './pages/Events';
+import ScoreEntry from './pages/ScoreEntry';
 import StartOrderList from './pages/StartOrderList';
 import Results from './pages/Results';
-import './App.css';
+import ResultsDetail from './pages/ResultsDetail';
 import './styles/Global.css';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Competitions />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/startOrderList" element={<StartOrderList />} />
-        <Route path="/results" element={<Results />} />
+        <Route path="/" element={<Layout />}>
+          {/* головна сторінка */}
+          <Route index element={<Dashboard />} />
+
+          {/* інші сторінки */}
+          <Route path="competitions" element={<Competitions />} />
+          <Route path="competition/:id" element={<StartOrderList />} />
+          <Route path="score/:id" element={<ScoreEntry />} />
+          <Route path="/results" element={<Results />} />
+          <Route path="/results/:id" element={<ResultsDetail />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

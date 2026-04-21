@@ -11,7 +11,6 @@ function BurgerMenu() {
       </button>
 
       <div className={`menu-content ${open ? 'open' : ''}`}>
-        <button className="button-secondary">Night</button>
         <div className="role">Суддя №5</div>
         <button className="button-secondary">Вийти</button>
       </div>

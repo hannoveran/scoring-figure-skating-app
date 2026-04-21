@@ -1,0 +1,36 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 17vw;
+  height: 100vh;
+  background: var(--foreground);
+  color: var(--text-color-light);
+}
+
+a {
+  color: var(--text-color-light);
+}
+
+.content {
+  margin-left: 17vw;
+  flex: 1;
+  padding: 20px;
+}
+
+.dashboard-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  margin-top: 2vh;
+}
+
+.dashboard-links a {
+  width: 14vw;
+  height: 8vh;
+  border: 1px solid var(--border-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,42 @@
+.results-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  margin-top: 3vh;
+}
+
+.result-card {
+  padding: 2vh 2vw;
+  background: var(--background);
+  text-decoration: none;
+  color: var(--text-color);
+  width: 250px;
+}
+
+.result-card:hover {
+  transform: translate(-2px, -2px);
+}
+
+/* HEADER */
+.results-header {
+  margin-top: 3vh;
+  padding: 2vh 2vw;
+  background: var(--foreground);
+  color: var(--text-color-light);
+}
+
+/* TABLE */
+.results-table {
+  margin-top: 3vh;
+}
+
+.results-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.results-table th,
+.results-table td {
+  padding: 1.5vh 1vw;
+  text-align: left;
+}

@@ -1,0 +1,67 @@
+.score-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+/* GOE */
+.goe-buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.goe-btn {
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--border-dark);
+  background: var(--background);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.goe-btn.active {
+  background: var(--foreground);
+  color: var(--text-color-light);
+}
+
+.goe-btn.pos {
+  background: var(--light-teal);
+}
+
+.goe-btn.neg {
+  background: var(--light-pink);
+}
+
+/* ELEMENT ROW (ширше) */
+.element-row {
+  display: grid;
+  grid-template-columns: 40px 1fr 80px auto 80px;
+  gap: 1vw;
+  margin-top: 1.5vh;
+  align-items: center;
+}
+
+/* PCS */
+.pcs-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 60px;
+  align-items: center;
+  gap: 1vw;
+  margin-top: 1vh;
+}
+
+.pcs-row input[type='range'] {
+  width: 100%;
+}
+
+/* SECTION */
+.section h2 {
+  margin-bottom: 1vh;
+}
+
+/* SUMMARY трохи краще */
+.score-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1vw;
+}

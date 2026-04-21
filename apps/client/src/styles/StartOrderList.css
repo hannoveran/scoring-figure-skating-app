@@ -1,12 +1,104 @@
-.start-order-list-table {
+/* HEADER */
+.competition-header {
   display: flex;
-  justify-content: center;
-  margin-top: 5vh;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 3vh 2vw;
+  margin-top: 3vh;
+
+  background: var(--foreground);
+  color: var(--text-color-light);
+}
+
+/* STATUS */
+.status {
+  padding: 6px 12px;
+  border: 2px solid var(--border-dark);
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.status.in_progress {
+  background: var(--blue);
+  color: var(--foreground);
+}
+
+.status.upcoming {
+  background: var(--light-teal);
+  color: var(--foreground);
+}
+
+.status.completed {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* TABLE WRAPPER */
+.start-order-wrapper {
+  margin-top: 4vh;
+  background: var(--background);
+}
+
+/* HEAD */
+.table-head {
+  padding: 2vh 2vw;
+  border-bottom: 2px solid var(--border-dark);
+}
+
+/* TABLE */
+table {
+  width: 100%;
   border-collapse: collapse;
 }
 
-.start-order-list-table td,
-.start-order-list-table th {
-  padding: 2vh 4vw;
+th {
   text-align: left;
+  padding: 2vh 2vw;
+  border-bottom: 2px solid var(--border-dark);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 2vh 2vw;
+  border-bottom: 1px solid var(--border-dark);
+}
+
+/* ROW HOVER */
+tr:hover {
+  background: var(--light-pink);
+}
+
+/* TAG */
+.tag {
+  padding: 4px 8px;
+  border: 2px solid var(--border-dark);
+  font-size: 12px;
+}
+
+.tag.scored {
+  background: var(--teal);
+}
+
+.tag.pending {
+  background: var(--light-teal);
+}
+
+.tag.reviewed {
+  background: var(--foreground);
+  color: var(--text-color-light);
+}
+
+/* LINK BUTTON */
+.score-link {
+  display: inline-block;
+  padding: 6px 10px;
+  border: 2px solid var(--border-dark);
+  background: var(--blue);
+}
+
+.score-link:hover {
+  transform: translate(2px, 2px);
+  box-shadow: none;
 }

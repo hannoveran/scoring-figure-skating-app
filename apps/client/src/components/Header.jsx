@@ -7,10 +7,6 @@ function Header() {
     <header>
       <div className="logo-app-name">
         <Link to="/">
-          <div className="logo">
-            <img src="/snowflake.png" alt="" />
-          </div>
-
           <p>Суддівська платформа</p>
         </Link>
       </div>

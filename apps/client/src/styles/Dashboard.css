@@ -1,0 +1,123 @@
+/* HR */
+hr {
+  background-color: var(--foreground);
+  height: 3px;
+  margin-top: 3vh;
+}
+
+/* STATS */
+.overview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3vw;
+  justify-content: center;
+  margin: 4vh 0;
+}
+
+.stat-card {
+  width: 18vw;
+  height: 14vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* кольори */
+.teal {
+  background-color: var(--teal);
+}
+
+.pink {
+  background-color: var(--dark-pink);
+}
+
+.blue {
+  background-color: var(--blue);
+}
+
+.dark {
+  background-color: var(--foreground);
+  color: var(--text-color-light);
+}
+
+/* RECENT */
+.recent-competitions {
+  margin-top: 4vh;
+}
+
+#recent-competitions-headline {
+  background-color: var(--foreground);
+  display: flex;
+  justify-content: space-between;
+  padding: 2vh 2vw;
+}
+
+#recent-competitions-headline h2 {
+  color: var(--beige);
+}
+
+#recent-competitions-headline a {
+  color: var(--blue);
+}
+
+/* LIST */
+#recent-competitions-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.competition-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 2vh 2vw;
+  border-top: 2px solid var(--border-dark);
+  color: var(--foreground);
+}
+
+.competition-row:hover {
+  background-color: var(--light-pink);
+  color: var(--beige);
+}
+
+.competition-left {
+  display: flex;
+  gap: 1vw;
+}
+
+.competition-index {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--border-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.competition-right {
+  display: flex;
+  gap: 1vw;
+  align-items: center;
+}
+
+/* TAGS */
+.tag {
+  border: 2px solid var(--border-dark);
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+/* status */
+.status.upcoming {
+  background-color: var(--light-teal);
+}
+
+.status.in_progress {
+  background-color: var(--blue);
+}
+
+.status.completed {
+  background-color: var(--foreground);
+  color: var(--text-color-light);
+}

@@ -16,6 +16,15 @@ const Competition = sequelize.define(
   {
     tableName: 'competition',
     timestamps: false,
+
+    indexes: [
+      {
+        fields: ['status'],
+      },
+      {
+        fields: ['date'],
+      },
+    ],
   },
 );
 

@@ -9,8 +9,6 @@ function Dashboard() {
   const [performances, setPerformances] = useState([]);
 
   useEffect(() => {
-    // тут потім підключиш свій бекенд
-    // зараз мок-дані
     setCompetitions([
       {
         id: 1,

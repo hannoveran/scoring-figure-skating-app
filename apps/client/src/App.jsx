@@ -6,6 +6,8 @@ import ScoreEntry from './pages/ScoreEntry';
 import StartOrderList from './pages/StartOrderList';
 import Results from './pages/Results';
 import ResultsDetail from './pages/ResultsDetail';
+import Login from './pages/Login';
+import Register from './pages/Register';
 import './styles/Global.css';
 
 function App() {
@@ -20,6 +22,9 @@ function App() {
           <Route path="score/:id" element={<ScoreEntry />} />
           <Route path="results" element={<Results />} />
           <Route path="results/:id" element={<ResultsDetail />} />
+
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Route>
       </Routes>
     </HashRouter>

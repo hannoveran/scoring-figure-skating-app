@@ -8,6 +8,7 @@ const User = sequelize.define(
     email: DataTypes.STRING,
     password: DataTypes.STRING,
     role: DataTypes.STRING,
+    refreshToken: DataTypes.STRING,
   },
   {
     tableName: 'users',

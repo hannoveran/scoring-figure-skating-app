@@ -1,3 +1,6 @@
+const sequelize = require('../config/db');
+const { Op } = require('sequelize');
+const redisClient = require('../config/redis');
 const Competition = require('../models/Competition');
 
 // CREATE (INSERT)
@@ -21,7 +24,12 @@ exports.createCompetition = async (req, res) => {
       created_by: 1,
     });
 
-    res.status(201).json(competition);
+    await redisClient.del('competitions:all');
+
+    res.status(201).json({
+      success: true,
+      data: competition,
+    });
   } catch (err) {
     console.error(err);
     res.status(500).json({
@@ -42,8 +50,17 @@ exports.getCompetitions = async (req, res) => {
         },
       },
     });
+
+    res.json({
+      success: true,
+      data,
+    });
   } catch (err) {
-    res.status(500).json(err);
+    console.error(err);
+
+    res.status(500).json({
+      message: 'Error fetching competitions',
+    });
   }
 };
 
@@ -69,6 +86,8 @@ exports.updateCompetition = async (req, res) => {
       status: status || 'upcoming',
     });
 
+    await redisClient.del('competitions:all');
+
     res.json(updated);
   } catch (err) {
     console.error(err);
@@ -81,22 +100,26 @@ exports.deleteCompetition = async (req, res) => {
   try {
     const { id } = req.params;
 
-    await sequelize.query(`
-      DELETE FROM score
-      WHERE program_id IN (
-        SELECT id FROM program WHERE competition_id = ${id}
-      )
-    `);
+    await Score.destroy({
+      where: {
+        competition_id: id,
+      },
+    });
 
-    await sequelize.query(`
-      DELETE FROM program WHERE competition_id = ${id}
-    `);
+    await Program.destroy({
+      where: { competition_id: id },
+    });
 
-    const deleted = await Competition.destroy({
+    await Competition.destroy({
       where: { id },
     });
 
-    res.json({ message: 'Deleted' });
+    await redisClient.del('competitions:all');
+
+    res.json({
+      success: true,
+      message: 'Competition deleted',
+    });
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: 'Delete error' });

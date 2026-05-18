@@ -1,0 +1,14 @@
+config:
+  target: 'http://localhost:3001'
+  phases:
+    - duration: 30
+      arrivalRate: 20
+      name: 'Warm up'
+    - duration: 60
+      arrivalRate: 50
+      name: 'Load test'
+scenarios:
+  - name: 'Get competitions'
+    flow:
+      - get:
+          url: '/api/competitions?page=1&limit=10'
